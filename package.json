@@ -19,6 +19,7 @@
     "@ethersproject/solidity": "^5.0.10",
     "@ethersproject/strings": "^5.0.5",
     "@ethersproject/units": "^5.0.3",
+    "@snapshot-labs/snapshot.js": "^0.1.9",
     "ajv": "^7.0.0-beta.4",
     "ajv-formats": "^2.0.2",
     "bs58": "^4.0.1",

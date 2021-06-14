@@ -12,6 +12,7 @@ import { strategy as erc20Price } from './erc20-price';
 import { strategy as balanceOfWithMin } from './balance-of-with-min';
 import { strategy as ethBalance } from './eth-balance';
 import { strategy as ethWalletAge } from './eth-wallet-age';
+import { strategy as kogecoin } from './kogecoin';
 import { strategy as multichain } from './multichain';
 import { strategy as makerDsChief } from './maker-ds-chief';
 import { strategy as uni } from './uni';
@@ -122,6 +123,7 @@ export default {
   'erc721-with-multiplier': erc721WithMultiplier,
   'erc1155-balance-of': erc1155BalanceOf,
   'erc1155-balance-of-cv': erc1155BalanceOfCv,
+  kogecoin,
   multichain,
   uni,
   'frax-finance': fraxFinance,
