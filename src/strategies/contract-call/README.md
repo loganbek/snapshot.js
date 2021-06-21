@@ -45,15 +45,10 @@ You can call methods with multiple inputs in any contract:
 {
   "strategies": [
     ["contract-call", {
-      // contract address
-      "address": "0x6887DF2f4296e8B772cb19479472A16E836dB9e0",
-      // output decimals
-      "decimals": 18,
-      // strategy symbol
-      "symbol": "mySCORE",
-      // arguments are passed to the method; "%{address}" is replaced with the voter's address; default value ["%{address}"]
-      "args": ["0x6887DF2f4296e8B772cb19479472A16E836dB9e0", "%{address}"], 
-      // method ABI, output type should be uint256
+      "address": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
+      "decimals": 9,
+      "symbol": "KOGE",
+      "args": ["0x13748d548d95d78a3c83fe3f32604b4796cffa23", "%{address}"], 
       "methodABI": {
         "constant": true,
         "inputs": [{
