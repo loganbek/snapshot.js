@@ -4,9 +4,9 @@
     "strategy": {
       "name": "contract-call",
       "params": {
-        "address": "0xC4323faB07b6944Bf8d06B33fFf398a21D6CA207",
-        "decimals": 18,
-        "symbol": "KUN",
+        "address": "0x13748d548d95d78a3c83fe3f32604b4796cffa23",
+        "decimals": 9,
+        "symbol": "KOGECOIN",
         "methodABI": {
           "inputs": [
             {
@@ -15,7 +15,7 @@
               "type": "address"
             }
           ],
-          "name": "votesOf",
+          "name": "balanceOf",
           "outputs": [
             {
               "internalType": "uint256",
@@ -28,10 +28,10 @@
         }
       }
     },
-    "network": "97",
+    "network": "137",
     "addresses": [
-      "0xeF8305E140ac520225DAf050e2f71d5fBcC543e7"
+      "0x13748d548d95d78a3c83fe3f32604b4796cffa23"
     ],
-    "snapshot": 3596310
+    "snapshot": 15936506
   }
 ]
