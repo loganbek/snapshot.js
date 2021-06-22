@@ -53,6 +53,36 @@ You can call methods with multiple inputs in any contract:
         "constant": true,
         "inputs": [{
           "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }],
+        "name": "balanceOf",
+        "outputs": [{
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      }
+    }],
+  ]
+}
+```
+
+```JSON
+{
+  "strategies": [
+    ["contract-call", {
+      "address": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
+      "decimals": 9,
+      "symbol": "KOGE",
+      "args": ["0x13748d548d95d78a3c83fe3f32604b4796cffa23", "%{address}"], 
+      "methodABI": {
+        "constant": true,
+        "inputs": [{
+          "internalType": "address",
           "name": "_someAddress",
           "type": "address"
         }, {
