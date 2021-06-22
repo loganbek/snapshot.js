@@ -207,3 +207,4 @@ KogeCoin/Matic LP - 4.728089 UNI-V2
 }
 
 ```
+npm run test --strategy=<STRATEGY NAME> 
