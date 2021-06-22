@@ -3,22 +3,23 @@
 Before Release:
 
 - [ ] calculate weights
-  - [ ] kogecoin-matic LP
+  - [ ] kogecoin-matic LP - new strategy or subgraph?
     - [ ] returns 0.00009249409476126
-  - [ ] kogecoin-matic LP (staking)
+  - [x] kogecoin-matic LP (staking)
     - [ ] returns .01 or 0.009156915381364771 - [] matches kogefarm
 - [x] Kogecoin (wallet)
 - [x] KogeKoge auto compounding (vault)
-- [x] Kogecoin-Matic LP (wallet)
-- [x] Kogecoin-Matic LP (staking)
+  - [ ] incorporate ratio from contract
+- [ ] Kogecoin-Matic LP (wallet)
+- [ ] Kogecoin-Matic LP (staking)
 - [ ] Kogecoin (staking)
-- [ ] ensure strategies can use together
+- [x] ensure strategies can use together
   - [ ] symbol updates
-- [ ] improve css for skin
+- [x] improve css for skin
 - [ ] Testing
-- [ ] Terms
+- [x] !Terms
 - [ ] Logo Contest Trial
-- [ ] finalize proposal threshold + weights
+- [ ] finalize proposal threshold - up to 100
 
 After Release:
 
@@ -30,6 +31,7 @@ After Release:
   - [ ] the-graph-indexing
 - [ ] Automated Member additions
 - [ ] ERC-Balance-of w/ minimum?
+- [ ] vote.kogecoin.io
 
 ## KOGECOIN (wallet) - [x]
 
@@ -57,9 +59,10 @@ KOGECOIN-MATIC LP - erc20-balance-of - <https://polygonscan.com/token/0x3885503a
 
 ```JSON
 {
-"symbol": "WIP **_Koge-Matic LP (wallet) Votes_** **_TODO: DECIDE WEIGHT_**",
+"symbol": "WIP Koge-Matic LP (wallet)",
 "address": "0x3885503aef5e929fcb7035fbdca87239651c8154",
-"decimals": 18
+"decimals": 18,
+"weight": 15000
 } 
 ```
 
@@ -67,18 +70,18 @@ returns 0.00009249409476126 | TODO need to weight this? maybe need new strategy.
 
 ---
 
-## KOGECOIN-MATIC LP (staked) - [x] TODO: DECIDE WEIGHT
+## KOGECOIN-MATIC LP (staked) - [x] 
 
 KOGECOIN-MATIC LP STAKED - masterchef-pool-balance <https://polygonscan.com/address/0x6275518a63e891b1bC54FEEBBb5333776E32fAbD>
 [<https://snapshot.org/#/playground/masterchef-pool-balance>](https://snapshot.org/#/playground/masterchef-pool-balance)
 
 ```JSON
 {
-"symbol": "WIP **_Koge-Matic (wallet) LP Votes_** **_TODO: DECIDE WEIGHT_**",
+"symbol": "Koge-Matic (staked) LP",
 "chefAddress": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
 "uniPairAddress": null,
 "pid": "0",
-"weight": 1,
+"weight": 15000,
 "weightDecimals": 0
 } 
 ```
@@ -109,6 +112,112 @@ KOGECOIN-KOGECOIN LP VAULT - erc20-balance-of - <https://polygonscan.com/address
 "address": "0x992Ae1912CE6b608E0c0d2BF66259ab1aE62A657",
 "decimals": 9
 } 
+```
+
+```JSON
+{
+  "strategies": [
+    ["contract-call", {
+      // contract address
+      "address": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
+      // output decimals
+      "decimals": 9,
+      // strategy symbol
+      "symbol": "KOGECOIN",
+      // arguments are passed to the method; "%{address}" is replaced with the voter's address; default value ["%{addres{s}"]
+      "args": ["0x6275518a63e891b1bC54FEEBBb5333776E32fAbD", "%{address}"], 
+      // method ABI, output type should be uint256
+     "methodABI": {
+        "constant": true,
+        "inputs": [{
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }],
+        "name": "balanceOf",
+        "outputs": [{
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      }
+    }],
+  ]
+}
+```
+
+```JSON
+{
+  "strategies": [
+    ["contract-call", {
+      // token address
+      "address": "0x6887DF2f4296e8B772cb19479472A16E836dB9e0",
+      // token decimals
+      "decimals": 18,
+      // token symbol
+      "symbol": "DAI",
+      // ABI for balanceOf method
+      "methodABI": {
+        "constant": true,
+        "inputs": [{
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }],
+        "name": "balanceOf",
+        "outputs": [{
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      }
+    }],
+  ]
+}
+You can call methods with multiple inputs in any contract:
+
+{
+  "strategies": [
+    ["contract-call", {
+      // contract address
+      "address": "0x6887DF2f4296e8B772cb19479472A16E836dB9e0",
+      // output decimals
+      "decimals": 18,
+      // strategy symbol
+      "symbol": "mySCORE",
+      // arguments are passed to the method; "%{address}" is replaced with the voter's address; default value ["%{address}"]
+      "args": ["0x6887DF2f4296e8B772cb19479472A16E836dB9e0", "%{address}"], 
+      // method ABI, output type should be uint256
+      "methodABI": {
+        "constant": true,
+        "inputs": [{
+          "internalType": "address",
+          "name": "_someAddress",
+          "type": "address"
+        }, {
+          "internalType": "address",
+          "name": "_voterAddress",
+          "type": "address"
+        }],
+        "name": "totalScoresFor",
+        "outputs": [{
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      }
+    }],
+  ]
+}
 ```
 
 returns 3500.515950975 - [x]
@@ -211,3 +320,34 @@ returns  0.03932647357965912
 "weightDecimals": 0
 }
 ```
+
+
+### Pagination seems to function same as erc20-balance-of
+
+```JSON
+
+{
+  "symbol": "KOGECOIN",
+  "strategy": {
+    "name": "erc20-balance-of",
+    "params": {
+      "address": "0x13748d548d95d78a3c83fe3f32604b4796cffa23",
+      "decimals": 9
+    }
+  }
+}
+```
+
+**KOGECOIN** - erc20-balance-of - <https://polygonscan.com/address/0x13748d548d95d78a3c83fe3f32604b4796cffa23>
+
+**KOGECOIN-MATIC LP** - erc20-balance-of - <https://polygonscan.com/token/0x3885503aef5e929fcb7035fbdca87239651c8154>
+
+**KOGECOIN-MATIC LP STAKED** - masterchef-pool-balance <https://polygonscan.com/address/0x6275518a63e891b1bC54FEEBBb5333776E32fAbD>
+[<https://snapshot.org/#/playground/masterchef-pool-balance>](https://snapshot.org/#/playground/masterchef-pool-balance)
+
+**KOGECOIN-KOGECOIN LP VAULT** - erc20-balance-of - <https://polygonscan.com/address/0x992Ae1912CE6b608E0c0d2BF66259ab1aE62A657>
+<https://polygonscan.com/token/0x992Ae1912CE6b608E0c0d2BF66259ab1aE62A657#balance>
+<https://polygonscan.com/token/0x992Ae1912CE6b608E0c0d2BF66259ab1aE62A657?a=0x66382ac45b6d8cb4f47685e28b61fbb5486817ec#tokenAnalytics>
+
+**KOGECOIN STAKED** - <https://polygonscan.com/address/0x6275518a63e891b1bC54FEEBBb5333776E32fAbD>
+
