@@ -70,7 +70,7 @@ returns 0.00009249409476126 | TODO need to weight this? maybe need new strategy.
 
 ---
 
-## KOGECOIN-MATIC LP (staked) - [x] 
+## KOGECOIN-MATIC LP (staked) - [x]
 
 KOGECOIN-MATIC LP STAKED - masterchef-pool-balance <https://polygonscan.com/address/0x6275518a63e891b1bC54FEEBBb5333776E32fAbD>
 [<https://snapshot.org/#/playground/masterchef-pool-balance>](https://snapshot.org/#/playground/masterchef-pool-balance)
@@ -321,7 +321,6 @@ returns  0.03932647357965912
 }
 ```
 
-
 ### Pagination seems to function same as erc20-balance-of
 
 ```JSON
@@ -338,6 +337,39 @@ returns  0.03932647357965912
 }
 ```
 
+kogecoin-matic lp wallet contract-call - 0x6275518a63e891b1bC54FEEBBb5333776E32fAbD
+
+```JSON
+{
+      // contract address
+      "address": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
+      // output decimals
+      "decimals": 18,
+      // strategy symbol
+      "symbol": "KOGECOIN-MATIC LP (wallet)",
+      // arguments are passed to the method; "%{address}" is replaced with the voter's address; default value ["%{addres{s}"]
+      "args": ["0x3885503aef5e929fcb7035fbdca87239651c8154", "%{address}"], 
+      // method ABI, output type should be uint256
+     "methodABI": {
+        "constant": true,
+        "inputs": [{
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }],
+        "name": "balanceOf",
+        "outputs": [{
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      }
+    }
+```
+
 **KOGECOIN** - erc20-balance-of - <https://polygonscan.com/address/0x13748d548d95d78a3c83fe3f32604b4796cffa23>
 
 **KOGECOIN-MATIC LP** - erc20-balance-of - <https://polygonscan.com/token/0x3885503aef5e929fcb7035fbdca87239651c8154>
@@ -349,5 +381,7 @@ returns  0.03932647357965912
 <https://polygonscan.com/token/0x992Ae1912CE6b608E0c0d2BF66259ab1aE62A657#balance>
 <https://polygonscan.com/token/0x992Ae1912CE6b608E0c0d2BF66259ab1aE62A657?a=0x66382ac45b6d8cb4f47685e28b61fbb5486817ec#tokenAnalytics>
 
-**KOGECOIN STAKED** - <https://polygonscan.com/address/0x6275518a63e891b1bC54FEEBBb5333776E32fAbD>
+call getRatio w/ contract_call
+`balance().mul(1e18).div(totalSupply());`
 
+**KOGECOIN STAKED** - <https://polygonscan.com/address/0x6275518a63e891b1bC54FEEBBb5333776E32fAbD>
