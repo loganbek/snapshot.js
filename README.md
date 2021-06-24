@@ -26,6 +26,14 @@ You can create an index.html file and include Snapshot.js with:
 
 #### KOGECOIN STRATEGY NOTES
 
+##### Final Strategy builds (improve accuracy)
+
+- [ ] kogecoin works correctly but try w/ erc20-balance-of strat from snapshot.js 
+- [ ] kogecoin-matic LP (wallet)  currently cannot weight
+- [ ] kogecoin-matic LP (staked)  currently fixed integer weight, should be dynamic w/ supply
+- [ ] kogecoin autocompounding vault (vkogekoge)  need to incorporate ratio in calc, use contract getRatio()
+- [ ] kogecoin (staked)  need solution w/ masterchef (maybe modified)
+  
 ```JSON
 {
   "strategies": [
