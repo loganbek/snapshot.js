@@ -1,0 +1,22 @@
+  {
+    "_comment": "kogecoin-matic-lp-staked",
+    "name": "kogecoin-matic-lp-staked",
+    "strategy": {
+      "name": "masterchef-pool-balance",
+      "params": {
+        "chefAddress": "0xD38abbAeC03a9FF287eFc9a5F0d0580E07335D1D",
+        "uniPairAddress": null,
+        "pid": "0",
+        "weight": 15000,
+        "weightDecimals": 0
+      }
+    },
+    "network": "137",
+    "addresses": [
+        "0x66382ac45B6d8Cb4f47685e28b61FBb5486817Ec",
+      "0xfCA5a27d4cfF104FC276897CA3f32cFeDc6f50BA",
+      "0x577bfa0898187c10bbbbb3d001c94aafb5cfc0e4"
+    ],
+    "snapshot": "11437846"
+  }
+
