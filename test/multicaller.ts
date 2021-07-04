@@ -2,7 +2,7 @@ const snapshot = require('../');
 const { abi } = require('./ERC20.json');
 const { Multicaller, getProvider } = snapshot.utils;
 
-const network = '1';
+const network = '137';
 const provider = getProvider(network);
 const tokens = [
   '0x6B175474E89094C44Da98b954EedeAC495271d0F',
