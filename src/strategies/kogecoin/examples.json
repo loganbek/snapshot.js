@@ -1,0 +1,17 @@
+    {
+      "name": "Kogecoin Wallet",
+      "strategy": {
+        "name": "kogecoin",
+        "params": {
+          "symbol": "KOGECOIN",
+          "address": "0x13748d548d95d78a3c83fe3f32604b4796cffa23",
+          "decimals": 9
+        }
+      },
+      "network": "137",
+      "addresses": [
+        "0x66382ac45B6d8Cb4f47685e28b61FBb5486817Ec",
+        "0xbb5be361d520042438e33084e28336fd3a08c30e"
+      ],
+      "snapshot": 11437846
+    }
