@@ -1,11 +1,12 @@
 {
-  "name": "Kogecoin Wallet",
+  "name": "Kogecoin Staked",
   "strategy": {
     "name": "kogecoin",
     "params": {
       "symbol": "KOGECOIN",
       "address": "0x13748d548d95d78a3c83fe3f32604b4796cffa23",
-      "decimals": 9
+      "decimals": 9,
+      "masterChefContractAddress": "0x6275518a63e891b1bc54feebbb5333776e32fabd"
     }
   },
   "network": "137",

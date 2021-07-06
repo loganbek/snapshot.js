@@ -1,13 +1,14 @@
 # KogeCoin Strategy
 
-// - [] X KogeCoin - 0x13748d548d95d78a3c83fe3f32604b4796cffa23 - erc20-balance-of 
-// - [] XX KogeCoin/Matic LP - 0x3885503aef5e929fcb7035fbdca87239651c8154 - erc20-balance-of
-// - [ ] XStaked X KogeCoin - 
-// - [ ] XStaked X KogeCoin/Matic LP -
+- [x] KogeCoin - 0x13748d548d95d78a3c83fe3f32604b4796cffa23 - erc20-balance-of
+- [ ] KogeCoin/Matic LP - 0x3885503aef5e929fcb7035fbdca87239651c8154 - erc20-balance-of
+- [ ] Staked X KogeCoin -
+- [ ] Staked X KogeCoin/Matic LP -
+- [x] vKogeKoge
 
 CURRENT STRATEGIES:
 
-1) erc20-balance-of
+1. erc20-balance-of
 
 ```json
 {
@@ -17,7 +18,7 @@ CURRENT STRATEGIES:
 }
 ```
 
-2) masterchef-pool-balance
+2. masterchef-pool-balance
 
 ```json
 {
@@ -30,7 +31,7 @@ CURRENT STRATEGIES:
 }
 ```
 
-3) erc20-balance-of-coeffy
+3. erc20-balance-of-coeff
 
 ```json
 {
@@ -41,7 +42,7 @@ CURRENT STRATEGIES:
 }
 ```
 
-4) erc20-balance-of-coeff
+4. erc20-balance-of-coeff
 
 ```json
 {
@@ -52,12 +53,12 @@ CURRENT STRATEGIES:
 }
 ```
 
-5) ? Kogecoin Staked
+5. ? Kogecoin Staked - based off nerve.finance
 
 REBUILD/UPDATE/FIX
 
-1) erc20-balance-of - KogeCoin (wallet)
-2) masterchef-pool-balance - KogeCoin-Matic LP (staked)
-3) erc20-balance-of - KogeCoin-Matic LP (wallet)
-4) erc20-balance-of - KogeCoin (auto-compound)
-5) KogeCoin
+1. erc20-balance-of - KogeCoin (wallet)
+2. masterchef-pool-balance - KogeCoin-Matic LP (staked)
+3. erc20-balance-of - KogeCoin-Matic LP (wallet)
+4. erc20-balance-of - KogeCoin (auto-compound)
+5. KogeCoin

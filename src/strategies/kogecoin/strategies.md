@@ -44,7 +44,7 @@ KOGECOIN - erc20-balance-of - <https://polygonscan.com/address/0x13748d548d95d78
 "symbol": "KOGECOIN",
 "address": "0x13748d548d95d78a3c83fe3f32604b4796cffa23",
 "decimals": 9
-} 
+}
 ```
 
 <https://snapshot.org/#/playground/erc20-balance-of>
@@ -63,7 +63,7 @@ KOGECOIN-MATIC LP - erc20-balance-of - <https://polygonscan.com/token/0x3885503a
 "address": "0x3885503aef5e929fcb7035fbdca87239651c8154",
 "decimals": 18,
 "weight": 15000
-} 
+}
 ```
 
 returns 0.00009249409476126 | TODO need to weight this? maybe need new strategy.
@@ -83,7 +83,7 @@ KOGECOIN-MATIC LP STAKED - masterchef-pool-balance <https://polygonscan.com/addr
 "pid": "0",
 "weight": 15000,
 "weightDecimals": 0
-} 
+}
 ```
 
 returns .01 or 0.009156915381364771 - [] matches kogefarm KogeCoin-Matic LP farm.
@@ -95,6 +95,24 @@ returns .01 or 0.009156915381364771 - [] matches kogefarm KogeCoin-Matic LP farm
 KOGECOIN STAKED - <https://polygonscan.com/address/0x6275518a63e891b1bC54FEEBBb5333776E32fAbD>
 
 ```JSON
+{
+"name": "Kogecoin Staked",
+"strategy": {
+"name": "kogecoin",
+"params": {
+"symbol": "KOGECOIN",
+"address": "0x13748d548d95d78a3c83fe3f32604b4796cffa23",
+"decimals": 9,
+"masterChefContractAddress": "0x6275518a63e891b1bc54feebbb5333776e32fabd"
+}
+},
+"network": "137",
+"addresses": [
+"0x66382ac45B6d8Cb4f47685e28b61FBb5486817Ec",
+"0xbb5be361d520042438e33084e28336fd3a08c30e"
+],
+"snapshot": 11437846
+}
 
 ```
 
@@ -111,7 +129,7 @@ KOGECOIN-KOGECOIN LP VAULT - erc20-balance-of - <https://polygonscan.com/address
 "symbol": "vKogeKoge",
 "address": "0x992Ae1912CE6b608E0c0d2BF66259ab1aE62A657",
 "decimals": 9
-} 
+}
 ```
 
 ```JSON
@@ -125,7 +143,7 @@ KOGECOIN-KOGECOIN LP VAULT - erc20-balance-of - <https://polygonscan.com/address
       // strategy symbol
       "symbol": "KOGECOIN",
       // arguments are passed to the method; "%{address}" is replaced with the voter's address; default value ["%{addres{s}"]
-      "args": ["0x6275518a63e891b1bC54FEEBBb5333776E32fAbD", "%{address}"], 
+      "args": ["0x6275518a63e891b1bC54FEEBBb5333776E32fAbD", "%{address}"],
       // method ABI, output type should be uint256
      "methodABI": {
         "constant": true,
@@ -192,7 +210,7 @@ You can call methods with multiple inputs in any contract:
       // strategy symbol
       "symbol": "mySCORE",
       // arguments are passed to the method; "%{address}" is replaced with the voter's address; default value ["%{address}"]
-      "args": ["0x6887DF2f4296e8B772cb19479472A16E836dB9e0", "%{address}"], 
+      "args": ["0x6887DF2f4296e8B772cb19479472A16E836dB9e0", "%{address}"],
       // method ABI, output type should be uint256
       "methodABI": {
         "constant": true,
@@ -228,7 +246,7 @@ returns 3500.515950975 - [x]
 
 master-chef-pool-balance
 
-```JSON
+````JSON
 {
 "chefAddress": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
 "uniPairAddress": "0x3885503aef5e929fcb7035fbdca87239651c8154",
@@ -319,7 +337,7 @@ returns  0.03932647357965912
 "weight": 1,
 "weightDecimals": 0
 }
-```
+````
 
 ### Pagination seems to function same as erc20-balance-of
 
@@ -348,7 +366,7 @@ kogecoin-matic lp wallet contract-call - 0x6275518a63e891b1bC54FEEBBb5333776E32f
       // strategy symbol
       "symbol": "KOGECOIN-MATIC LP (wallet)",
       // arguments are passed to the method; "%{address}" is replaced with the voter's address; default value ["%{addres{s}"]
-      "args": ["0x3885503aef5e929fcb7035fbdca87239651c8154", "%{address}"], 
+      "args": ["0x3885503aef5e929fcb7035fbdca87239651c8154", "%{address}"],
       // method ABI, output type should be uint256
      "methodABI": {
         "constant": true,

@@ -134,7 +134,6 @@ export default {
   'erc721-with-multiplier': erc721WithMultiplier,
   'erc1155-balance-of': erc1155BalanceOf,
   'erc1155-balance-of-cv': erc1155BalanceOfCv,
-  'kogecoin': kogecoin,
   multichain,
   uni,
   'frax-finance': fraxFinance,
