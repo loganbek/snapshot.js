@@ -48,7 +48,7 @@ You can call methods with multiple inputs in any contract:
       "address": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
       "decimals": 9,
       "symbol": "KOGE",
-      "args": ["0x13748d548d95d78a3c83fe3f32604b4796cffa23", "%{address}"], 
+      "args": ["0x13748d548d95d78a3c83fe3f32604b4796cffa23", "%{address}"],
       "methodABI": {
         "constant": true,
         "inputs": [{
@@ -78,7 +78,7 @@ You can call methods with multiple inputs in any contract:
       "address": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
       "decimals": 9,
       "symbol": "KOGE",
-      "args": ["0x13748d548d95d78a3c83fe3f32604b4796cffa23", "%{address}"], 
+      "args": ["0x13748d548d95d78a3c83fe3f32604b4796cffa23", "%{address}"],
       "methodABI": {
         "constant": true,
         "inputs": [{
@@ -102,5 +102,16 @@ You can call methods with multiple inputs in any contract:
       }
     }],
   ]
+}
+```
+
+```JSON
+{
+"address": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
+"decimals": 9,
+"symbol": "KogeCoin (staked)",
+"methodABI": {
+"inputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"address","name":"","type":"address"}],"name":"userInfo","outputs":[{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"uint256","name":"rewardDebt","type":"uint256"}],"stateMutability":"view","type":"function"}
+
 }
 ```

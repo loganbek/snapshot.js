@@ -1,18 +1,49 @@
-{
-  "name": "Kogecoin Staked",
-  "strategy": {
-    "name": "kogecoin",
-    "params": {
-      "symbol": "KOGECOIN",
-      "address": "0x13748d548d95d78a3c83fe3f32604b4796cffa23",
-      "decimals": 9,
-      "masterChefContractAddress": "0x6275518a63e891b1bc54feebbb5333776e32fabd"
-    }
+[
+  {
+    "name": "Kogecoin Staked",
+    "strategy": {
+      "name": "kogecoin",
+      "params": {
+        "symbol": "KOGECOIN",
+        "address": "0x13748d548d95d78a3c83fe3f32604b4796cffa23",
+        "decimals": 9,
+        "masterChefContractAddress": "0x6275518a63e891b1bc54feebbb5333776e32fabd"
+      }
+    },
+    "network": "137",
+    "addresses": [
+      "0x66382ac45B6d8Cb4f47685e28b61FBb5486817Ec",
+      "0xbb5be361d520042438e33084e28336fd3a08c30e"
+    ],
+    "snapshot": 11437846
   },
-  "network": "137",
-  "addresses": [
-    "0x66382ac45B6d8Cb4f47685e28b61FBb5486817Ec",
-    "0xbb5be361d520042438e33084e28336fd3a08c30e"
-  ],
-  "snapshot": 11437846
-}
+  {
+    "name": "kogecoin-staked",
+    "strategy": {
+      "address": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
+      "decimals": 9,
+      "args": ["0", "%{pid}"],
+      "methodABI": {
+        "name": "userInfo",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          { "internalType": "uint256", "name": "rewardDebt", "type": "uint256" }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_pid",
+            "type": "uint256"
+          },
+          { "internalType": "uint256", "name": "_amount", "type": "uint256" }
+        ]
+      }
+    }
+  }
+]

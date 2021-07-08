@@ -14,8 +14,6 @@ import { strategy as balanceOfWithMin } from './balance-of-with-min';
 import { strategy as ethBalance } from './eth-balance';
 import { strategy as ethWithBalance } from './eth-with-balance';
 import { strategy as ethWalletAge } from './eth-wallet-age';
-// import { strategy as kogecoin } from './kogecoin';
-// import { strategy as kogecoinerc20balanceof } from './kogecoinerc20balanceof';
 import { strategy as multichain } from './multichain';
 import { strategy as makerDsChief } from './maker-ds-chief';
 import { strategy as uni } from './uni';

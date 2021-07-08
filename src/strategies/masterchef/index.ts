@@ -10,6 +10,10 @@ const SUSHISWAP_SUBGRAPH_URL = {
   '1': 'https://api.thegraph.com/subgraphs/name/sushiswap/exchange'
 };
 
+const POLYGON_SUBGRAPH_URL = {
+  '137': 'https://api.thegraph.com/subgraphs/name/sameepsi/maticblocks'
+};
+
 export const author = '0xKiwi';
 export const version = '0.1.0';
 

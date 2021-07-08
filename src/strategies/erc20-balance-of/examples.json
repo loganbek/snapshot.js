@@ -1,15 +1,16 @@
 [
   {
-    "name": "Example query",
+    "name": "Kogecoin Staked",
     "strategy": {
-      "name": "erc20-balance-of",
+      "name": "kogecoin",
       "params": {
-        "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
-        "symbol": "DAI",
-        "decimals": 18
+        "symbol": "KOGECOIN",
+        "address": "0x13748d548d95d78a3c83fe3f32604b4796cffa23",
+        "decimals": 9,
+        "masterChefContractAddress": "0x6275518a63e891b1bc54feebbb5333776e32fabd"
       }
     },
-    "network": "1",
+    "network": "137",
     "addresses": [
       "0x66382ac45B6d8Cb4f47685e28b61FBb5486817Ec",
       "0x16c686a511BdbC697860a4A3284fED9612D21c27",

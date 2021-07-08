@@ -21,11 +21,16 @@ const moreArg =
 
 const strategy = Object.keys(snapshot.strategies).find((s) => strategyArg == s);
 if (!strategy) throw 'Strategy not found';
-const example = require(`../src/strategies/${strategy}/examples.json`)[0];
+const example = require(`../src/strategies/${strategy}/examples.json`)[1];
 
 function callGetScores(example) {
+  console.log("example", example)
+  // console.log("example.strategy", example.strategy)
+  // console.log("example.network", example.network)
+  // console.log("example.addresses", example.addresses)
+  // console.log("example.snapshot", example.snapshot)
   return snapshot.utils.getScoresDirect(
-    'yam.eth',
+    'kogecoin.eth',
     [example.strategy],
     example.network,
     new JsonRpcProvider(networks[example.network].rpc[0]),
@@ -57,7 +62,7 @@ describe(`\nTest strategy "${strategy}"`, () => {
     expect(Object.keys(scores[0]).length).toBeGreaterThanOrEqual(1);
     expect(Object.keys(scores[0])
       .some(address => example.addresses.map(v => v.toLowerCase())
-      .includes(address.toLowerCase()))).toBe(true);
+        .includes(address.toLowerCase()))).toBe(true);
     // Check if all scores are numbers
     expect(Object.values(scores[0]).every((val, i, arr) => typeof val === 'number')).toBe(true)
   });
@@ -84,7 +89,7 @@ describe(`\nTest strategy "${strategy}" with latest snapshot`, () => {
 
   it('Strategy should run without any errors', async () => {
     const getScoresStart = performance.now();
-    scores = await callGetScores({...example, snapshot: 'latest'});
+    scores = await callGetScores({ ...example, snapshot: 'latest' });
     const getScoresEnd = performance.now();
     getScoresTime = getScoresEnd - getScoresStart;
     console.log('Scores with latest snapshot', scores);
@@ -103,7 +108,7 @@ describe(`\nTest strategy "${strategy}" with latest snapshot`, () => {
     expect(Object.keys(scores[0]).length).toBeGreaterThanOrEqual(1);
     expect(Object.keys(scores[0])
       .some(address => example.addresses.map(v => v.toLowerCase())
-      .includes(address.toLowerCase()))).toBe(true);
+        .includes(address.toLowerCase()))).toBe(true);
 
     // Check if all scores are numbers
     expect(Object.values(scores[0]).every((val, i, arr) => typeof val === 'number')).toBe(true)
