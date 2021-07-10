@@ -136,7 +136,6 @@ export default {
   'erc721-with-multiplier': erc721WithMultiplier,
   'erc1155-balance-of': erc1155BalanceOf,
   'erc1155-balance-of-cv': erc1155BalanceOfCv,
-  kogecoin,
   multichain,
   uni,
   'frax-finance': fraxFinance,
@@ -220,6 +219,7 @@ export default {
   'infinityprotocol-liquidity-pools': infinityProtocolPools,
   'aave-governance-power': aaveGovernancePower,
   cake,
-  'planet-finance': planetFinance,
-  'impossible-finance': impossibleFinance
+  'impossible-finance': impossibleFinance,
+ kogecoin, 
+  'planet-finance': planetFinance
 };
