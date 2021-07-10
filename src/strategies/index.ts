@@ -14,8 +14,6 @@ import { strategy as balanceOfWithMin } from './balance-of-with-min';
 import { strategy as ethBalance } from './eth-balance';
 import { strategy as ethWithBalance } from './eth-with-balance';
 import { strategy as ethWalletAge } from './eth-wallet-age';
-// import { strategy as kogecoin } from './kogecoin';
-import { strategy as kogecoinerc20balanceof } from './kogecoinerc20balanceof';
 import { strategy as multichain } from './multichain';
 import { strategy as makerDsChief } from './maker-ds-chief';
 import { strategy as uni } from './uni';
@@ -109,6 +107,7 @@ import { strategy as infinityProtocolPools } from './infinityprotocol-liquidity-
 import { strategy as aaveGovernancePower } from './aave-governance-power';
 import { strategy as cake } from './cake';
 import { strategy as planetFinance } from './planet-finance';
+import { strategy as kogecoin } from './kogecoin';
 import { strategy as impossibleFinance } from './impossible-finance';
 
 export default {
@@ -137,7 +136,7 @@ export default {
   'erc721-with-multiplier': erc721WithMultiplier,
   'erc1155-balance-of': erc1155BalanceOf,
   'erc1155-balance-of-cv': erc1155BalanceOfCv,
-  kogecoinerc20balanceof,
+  kogecoin,
   multichain,
   uni,
   'frax-finance': fraxFinance,

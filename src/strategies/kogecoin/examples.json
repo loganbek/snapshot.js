@@ -1,5 +1,27 @@
 {
-"symbol": "KOGECOIN",
-"address": "0x13748d548d95d78a3c83fe3f32604b4796cffa23",
-"decimals": 9
-} 
+    "address": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
+    "decimals": 9,
+    "symbol": "KOGECOIN",
+    "methodABI": {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "accounts",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "network": {
+        "key": "137"
+    }
+  }
