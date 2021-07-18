@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Kogecoin Queries",
+    "strategy": {
+      "name": "kogecoin",
+      "params": {
+        "symbol": "KOGECOIN (w)",
+        "address": "0x13748d548d95d78a3c83fe3f32604b4796cffa23",
+        "decimals": 9
+      },
+      "network": "137",
+      "addresses": [
+        "0x66382ac45B6d8Cb4f47685e28b61FBb5486817Ec",
+        "0xbb5be361d520042438e33084e28336fd3a08c30e"
+      ],
+      "snapshot": 16972549
+    }
+  },
+  {
+    "pid": "1",
+    "symbol": "KOGECOIN (s)",
+    "weight": 1000000000,
+    "chefAddress": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
+    "uniPairAddress": null,
+    "weightDecimals": 0
+  },
+  {
+    "coeff": 200000,
+    "symbol": "KOGECOIN LP (w)",
+    "address": "0x3885503aef5e929fcb7035fbdca87239651c8154",
+    "decimals": 18
+  },
+  {
+    "pid": "0",
+    "symbol": "KOGECOIN LP (s)",
+    "weight": 200000,
+    "chefAddress": "0x6275518a63e891b1bC54FEEBBb5333776E32fAbD",
+    "uniPairAddress": null,
+    "weightDecimals": 0
+  },
+  {
+    "coeff": 1.382887,
+    "symbol": "KOGECOIN (ac)",
+    "address": "0x992Ae1912CE6b608E0c0d2BF66259ab1aE62A657",
+    "decimals": 9
+  }
+]
