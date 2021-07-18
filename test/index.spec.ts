@@ -24,6 +24,8 @@ const strategy = Object.keys(snapshot.strategies).find((s) => strategyArg == s);
 if (!strategy) throw 'Strategy not found';
 const example = require(`../src/strategies/${strategy}/examples.json`)[0];
 
+console.log('example', example);
+
 function callGetScores(example) {
   return snapshot.utils.getScoresDirect(
     'yam.eth',
